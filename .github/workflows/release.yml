@@ -31,7 +31,7 @@ jobs:
             echo "Git tag $version already exists, failing to publish";
             exit 1
           else
-            echo "::set-output name=release_tag::$version"
+            echo "release_tag=$version" >> $GITHUB_OUTPUT
           fi
 
       - name: Setup Gradle
