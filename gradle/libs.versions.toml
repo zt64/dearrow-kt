@@ -1,12 +1,12 @@
 [versions]
-kotlin = "1.9.23"
+kotlin = "1.9.24"
 serialization = "1.6.3"
 hash = "0.5.1"
-ktor = "2.3.9"
+ktor = "2.3.11"
 coroutines = "1.8.1"
 compatibility = "0.14.0"
 publish = "0.28.0"
-ktlintPlugin = "12.1.0"
+ktlintPlugin = "12.1.1"
 ktlint = "1.2.1"
 
 [libraries]
