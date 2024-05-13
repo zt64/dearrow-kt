@@ -57,5 +57,5 @@ public data class Thumbnail internal constructor(
     @SerialName("UUID")
     override val uuid: String,
     @SerialName("userID")
-    override val userId: String
+    override val userId: String? = null
 ) : Item
