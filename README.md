@@ -22,7 +22,7 @@ Using [Ktor](https://github.com/ktorio/ktor) for networking.
 dearrowkt = "x.y.z"
 
 [libraries]
-dearrow = { module = "dev.zt64:dearrowkt, version.ref = "dearrowkt" }
+dearrow = { module = "dev.zt64:dearrow-kt", version.ref = "dearrowkt" }
 ```
 
 Make sure to replace `x.y.z` with the latest version and to add a Ktor engine to your dependencies.
