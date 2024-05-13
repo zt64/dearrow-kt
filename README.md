@@ -1,6 +1,6 @@
 # dearrow-kt
 
-[![Maven Central Version](https://img.shields.io/maven-central/v/dev.zt64/dearrowkt)](https://central.sonatype.com/artifact/dev.zt64/dearrowkt)
+[![Maven Central Version](https://img.shields.io/maven-central/v/dev.zt64/dearrow-kt)](https://central.sonatype.com/artifact/dev.zt64/dearrow-kt)
 <br>
 ![badge-platform-jvm]
 ![badge-platform-js]
@@ -13,6 +13,7 @@
 ![badge-platform-watchos]
 
 Kotlin multiplatform client for the [DeArrow API](https://wiki.sponsor.ajay.app/w/API_Docs/DeArrow).
+Using [Ktor](https://github.com/ktorio/ktor) for networking.
 
 ## Setup
 
@@ -23,6 +24,8 @@ dearrowkt = "x.y.z"
 [libraries]
 dearrow = { module = "dev.zt64:dearrowkt, version.ref = "dearrowkt" }
 ```
+
+Make sure to replace `x.y.z` with the latest version and to add a Ktor engine to your dependencies.
 
 ## Usage
 
