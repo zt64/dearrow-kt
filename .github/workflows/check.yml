@@ -43,5 +43,12 @@ jobs:
       - name: Gradle Wrapper Validation
         uses: gradle/actions/wrapper-validation@v3
 
+      - name: Cache konan directory
+        uses: actions/cache@v4
+        with:
+          path: ~/.konan
+          key: ${{ runner.os }}-konan-${{ hashFiles('**/build.gradle.kts') }}
+          restore-keys: "${{ runner.os }}-konan-"
+
       - name: Check
         run: ./gradlew check
