@@ -40,10 +40,10 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(libs.kotlin.serialization.json)
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.contentNegotiation)
                 implementation(libs.ktor.serialization)
+                implementation(libs.serialization.json)
                 implementation(libs.hash)
             }
         }
@@ -52,18 +52,7 @@ kotlin {
             dependencies {
                 implementation(libs.kotlin.test)
                 implementation(libs.coroutines.test)
-            }
-        }
-
-        jvmTest {
-            dependencies {
-                implementation(libs.ktor.client.okhttp)
-            }
-        }
-
-        linuxMain {
-            dependencies {
-                implementation(libs.ktor.client.curl)
+                implementation(libs.ktor.test)
             }
         }
     }
