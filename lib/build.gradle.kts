@@ -1,6 +1,7 @@
 import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import java.util.*
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -29,7 +30,12 @@ kotlin {
     //     nodejs()
     // }
 
-    native()
+    linuxX64()
+    linuxArm64()
+
+    mingwX64()
+
+    apple()
 
     sourceSets {
         commonMain {
@@ -98,38 +104,22 @@ mavenPublishing {
     }
 }
 
-private fun KotlinMultiplatformExtension.native(configure: KotlinNativeTarget.() -> Unit = {}) {
-    val hostOs = System.getProperty("os.name").lowercase()
-    val isAmd64 = System.getProperty("os.arch") == "amd64"
+private fun KotlinMultiplatformExtension.apple(configure: KotlinNativeTarget.() -> Unit = {}) {
+    val isMacOs = System.getProperty("os.name").lowercase(Locale.getDefault()).contains("mac")
 
-    when {
-        hostOs.startsWith("mac") -> {
-            if (isAmd64) {
-                listOf(
-                    macosX64(),
-                    iosX64(),
-                    tvosX64(),
-                    watchosX64()
-                )
-            } else {
-                listOf(
-                    macosArm64(),
-                    iosArm64(),
-                    iosSimulatorArm64(),
-                    tvosArm64(),
-                    tvosSimulatorArm64(),
-                    watchosArm64(),
-                    watchosSimulatorArm64()
-                )
-            }
-        }
+    if (!isMacOs) return
 
-        hostOs.startsWith("linux") -> {
-            listOf(if (isAmd64) linuxX64() else linuxArm64())
-        }
-
-        hostOs.startsWith("windows") -> listOf(mingwX64())
-
-        else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
-    }.forEach(configure)
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64(),
+        macosX64(),
+        macosArm64(),
+        tvosX64(),
+        tvosArm64(),
+        tvosSimulatorArm64(),
+        watchosArm32(),
+        watchosArm64(),
+        watchosSimulatorArm64()
+    ).forEach(configure)
 }
