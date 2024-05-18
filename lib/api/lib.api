@@ -17,6 +17,8 @@ public final class dev/zt64/dearrowkt/DeArrowClient : dev/zt64/dearrowkt/DeArrow
 	public fun <init> (Lio/ktor/client/HttpClient;)V
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
 	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/ktor/client/engine/HttpClientEngine;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/ktor/client/engine/HttpClientEngine;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun createSubmission (Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/ThumbnailSubmission;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun createSubmission (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun createSubmission (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/ThumbnailSubmission;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;

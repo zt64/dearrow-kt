@@ -3,6 +3,7 @@ package dev.zt64.dearrowkt
 import dev.zt64.dearrowkt.model.*
 import io.ktor.client.*
 import io.ktor.client.call.*
+import io.ktor.client.engine.*
 import io.ktor.client.plugins.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.request.*
@@ -16,6 +17,24 @@ import org.kotlincrypto.hash.sha2.SHA256
 private const val API_URL = "https://sponsor.ajay.app/api/"
 private const val USERAGENT = "DeArrowKt (https://github.com/zt64/dearrow-kt)"
 
+private fun createHttpClientConfig(
+    apiUrl: String,
+    userAgent: String
+): HttpClientConfig<*>.() -> Unit = {
+    install(UserAgent) {
+        agent = userAgent
+    }
+
+    install(ContentNegotiation) {
+        json(Json)
+    }
+
+    defaultRequest {
+        contentType(ContentType.Application.Json)
+        url(apiUrl)
+    }
+}
+
 /**
  * DeArrow client.
  *
@@ -28,22 +47,16 @@ public class DeArrowClient(private val httpClient: HttpClient) : DeArrowApi {
     public constructor(
         apiUrl: String = API_URL,
         userAgent: String = USERAGENT
-    ) : this(
-        httpClient = HttpClient {
-            install(UserAgent) {
-                agent = userAgent
-            }
+    ) : this(HttpClient(createHttpClientConfig(apiUrl, userAgent)))
 
-            install(ContentNegotiation) {
-                json(Json)
-            }
-
-            defaultRequest {
-                url(apiUrl)
-                contentType(ContentType.Application.Json)
-            }
-        }
-    )
+    /**
+     * Create a DeArrow client with the given [apiUrl], [userAgent], and [engine] using Ktor.
+     */
+    public constructor(
+        apiUrl: String = API_URL,
+        userAgent: String = USERAGENT,
+        engine: HttpClientEngine
+    ) : this(HttpClient(engine, createHttpClientConfig(apiUrl, userAgent)))
 
     public override suspend fun getBranding(
         videoId: String,
