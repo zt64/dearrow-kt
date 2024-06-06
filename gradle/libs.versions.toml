@@ -1,6 +1,6 @@
 [versions]
 kotlin = "2.0.0"
-serialization = "1.6.3"
+serialization = "1.7.0"
 hash = "0.5.1"
 ktor = "2.3.11"
 coroutines = "1.8.1"
