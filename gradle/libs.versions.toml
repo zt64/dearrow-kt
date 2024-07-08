@@ -6,7 +6,7 @@ ktor = "2.3.12"
 coroutines = "1.8.1"
 
 # Maintenance
-compatibility = "0.14.0"
+compatibility = "0.15.0"
 publish = "0.29.0"
 ktlintPlugin = "12.1.1"
 ktlint = "1.2.1"
