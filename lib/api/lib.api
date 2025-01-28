@@ -49,7 +49,6 @@ public synthetic class dev/zt64/dearrowkt/model/Branding$$serializer : kotlinx/s
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/dearrowkt/model/Branding;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/dearrowkt/model/Branding$Companion {
@@ -95,7 +94,6 @@ public synthetic class dev/zt64/dearrowkt/model/Thumbnail$$serializer : kotlinx/
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/dearrowkt/model/Thumbnail;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/dearrowkt/model/Thumbnail$Companion {
@@ -123,7 +121,6 @@ public synthetic class dev/zt64/dearrowkt/model/ThumbnailSubmission$$serializer 
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/dearrowkt/model/ThumbnailSubmission;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/dearrowkt/model/ThumbnailSubmission$Companion {
@@ -157,7 +154,6 @@ public synthetic class dev/zt64/dearrowkt/model/Title$$serializer : kotlinx/seri
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/dearrowkt/model/Title;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/dearrowkt/model/Title$Companion {
