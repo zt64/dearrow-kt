@@ -2,7 +2,7 @@
 kotlin = "2.1.10"
 serialization = "1.8.0"
 hash = "0.6.0"
-ktor = "3.0.2"
+ktor = "3.0.3"
 coroutines = "1.10.1"
 
 # Maintenance
