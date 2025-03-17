@@ -95,8 +95,8 @@ mavenPublishing {
 
         licenses {
             license {
-                name = "GNU General Public License v3.0"
-                url = "https://www.gnu.org/licenses/gpl-3.0.html"
+                name = "MIT License"
+                url = "https://opensource.org/licenses/MIT"
             }
         }
 
