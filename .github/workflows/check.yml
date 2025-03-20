@@ -8,6 +8,7 @@ on:
       - '**.kts'
       - 'gradle.properties'
       - '.github/workflows/check.yml'
+      - 'kotlin-js-store'
       - 'gradle/**'
   pull_request:
     branches: [ main ]
@@ -16,6 +17,7 @@ on:
       - '**.kts'
       - 'gradle.properties'
       - '.github/workflows/check.yml'
+      - 'kotlin-js-store'
       - 'gradle/**'
   workflow_dispatch:
 
