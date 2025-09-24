@@ -2,7 +2,11 @@ public abstract interface class dev/zt64/dearrowkt/DeArrowApi {
 	public abstract fun createSubmission (Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/ThumbnailSubmission;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun createSubmission (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun createSubmission (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/ThumbnailSubmission;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun createSubmission$default (Ldev/zt64/dearrowkt/DeArrowApi;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/ThumbnailSubmission;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun createSubmission$default (Ldev/zt64/dearrowkt/DeArrowApi;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun createSubmission$default (Ldev/zt64/dearrowkt/DeArrowApi;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/dearrowkt/model/ThumbnailSubmission;Ldev/zt64/dearrowkt/model/Service;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public abstract fun getBranding (Ljava/lang/String;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun getBranding$default (Ldev/zt64/dearrowkt/DeArrowApi;Ljava/lang/String;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public abstract fun getBrandingByHash (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
@@ -41,7 +45,7 @@ public final class dev/zt64/dearrowkt/model/Branding {
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/dearrowkt/model/Branding$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/dearrowkt/model/Branding$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/dearrowkt/model/Branding$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/dearrowkt/model/Branding;
@@ -49,6 +53,7 @@ public synthetic class dev/zt64/dearrowkt/model/Branding$$serializer : kotlinx/s
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/dearrowkt/model/Branding;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/dearrowkt/model/Branding$Companion {
@@ -86,7 +91,7 @@ public final class dev/zt64/dearrowkt/model/Thumbnail : dev/zt64/dearrowkt/model
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/dearrowkt/model/Thumbnail$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/dearrowkt/model/Thumbnail$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/dearrowkt/model/Thumbnail$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/dearrowkt/model/Thumbnail;
@@ -94,6 +99,7 @@ public synthetic class dev/zt64/dearrowkt/model/Thumbnail$$serializer : kotlinx/
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/dearrowkt/model/Thumbnail;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/dearrowkt/model/Thumbnail$Companion {
@@ -113,7 +119,7 @@ public final class dev/zt64/dearrowkt/model/ThumbnailSubmission {
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/dearrowkt/model/ThumbnailSubmission$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/dearrowkt/model/ThumbnailSubmission$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/dearrowkt/model/ThumbnailSubmission$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/dearrowkt/model/ThumbnailSubmission;
@@ -121,6 +127,7 @@ public synthetic class dev/zt64/dearrowkt/model/ThumbnailSubmission$$serializer 
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/dearrowkt/model/ThumbnailSubmission;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/dearrowkt/model/ThumbnailSubmission$Companion {
@@ -146,7 +153,7 @@ public final class dev/zt64/dearrowkt/model/Title : dev/zt64/dearrowkt/model/Ite
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/dearrowkt/model/Title$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/dearrowkt/model/Title$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/dearrowkt/model/Title$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/dearrowkt/model/Title;
@@ -154,6 +161,7 @@ public synthetic class dev/zt64/dearrowkt/model/Title$$serializer : kotlinx/seri
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/dearrowkt/model/Title;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/dearrowkt/model/Title$Companion {
